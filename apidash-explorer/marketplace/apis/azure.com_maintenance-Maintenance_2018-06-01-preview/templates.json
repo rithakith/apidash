@@ -1,0 +1,477 @@
+{
+  "api_id": "azure.com:maintenance-Maintenance:2018-06-01-preview",
+  "endpoint_count": 18,
+  "endpoints": [
+    {
+      "id": "list-available-operations",
+      "name": "List available operations",
+      "description": "List the available operations supported by the Microsoft.Maintenance resource provider",
+      "method": "GET",
+      "url": "https://management.azure.com/providers/Microsoft.Maintenance/operations",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN."
+    },
+    {
+      "id": "get-configuration-records-within-a-subscription",
+      "name": "Get Configuration records within a subscription",
+      "description": "Get Configuration records within a subscription",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/providers/Microsoft.Maintenance/maintenanceConfigurations",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-configuration-record",
+      "name": "Get Configuration record",
+      "description": "Get Configuration record",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Maintenance/maintenanceConfigurations/{{RESOURCENAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCENAME}} with a real resourcename. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "create-or-update-configuration-record",
+      "name": "Create or Update configuration record",
+      "description": "Create or Update configuration record",
+      "method": "PUT",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Maintenance/maintenanceConfigurations/{{RESOURCENAME}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": {
+        "location": "",
+        "properties": {},
+        "tags": {}
+      },
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCENAME}} with a real resourcename. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "delete-configuration-record",
+      "name": "Delete Configuration record",
+      "description": "Delete Configuration record",
+      "method": "DELETE",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Maintenance/maintenanceConfigurations/{{RESOURCENAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCENAME}} with a real resourcename. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "patch-configuration-record",
+      "name": "Patch configuration record",
+      "description": "Patch configuration record",
+      "method": "PATCH",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Maintenance/maintenanceConfigurations/{{RESOURCENAME}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": {
+        "location": "",
+        "properties": {},
+        "tags": {}
+      },
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCENAME}} with a real resourcename. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "apply-updates-to-resource-with-parent",
+      "name": "Apply Updates to resource with parent",
+      "description": "Apply maintenance updates to resource with parent",
+      "method": "PUT",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCEPARENTTYPE}}/{{RESOURCEPARENTNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/applyUpdates/default",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{RESOURCEPARENTTYPE}}",
+        "{{RESOURCENAME}}",
+        "{{RESOURCEPARENTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{RESOURCEPARENTTYPE}} with a real resourceparenttype. Replace {{RESOURCENAME}} with a real resourcename. Replace {{RESOURCEPARENTNAME}} with a real resourceparentname. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "track-updates-to-resource-with-parent",
+      "name": "Track Updates to resource with parent",
+      "description": "Track maintenance updates to resource with parent",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCEPARENTTYPE}}/{{RESOURCEPARENTNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/applyUpdates/{{APPLYUPDATENAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{RESOURCEPARENTTYPE}}",
+        "{{RESOURCENAME}}",
+        "{{RESOURCEPARENTNAME}}",
+        "{{APPLYUPDATENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{RESOURCEPARENTTYPE}} with a real resourceparenttype. Replace {{RESOURCENAME}} with a real resourcename. Replace {{RESOURCEPARENTNAME}} with a real resourceparentname. Replace {{APPLYUPDATENAME}} with a real applyupdatename. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "list-configurationassignments-for-resource",
+      "name": "List configurationAssignments for resource",
+      "description": "List configurationAssignments for resource.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCEPARENTTYPE}}/{{RESOURCEPARENTNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/configurationAssignments",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{RESOURCEPARENTTYPE}}",
+        "{{RESOURCENAME}}",
+        "{{RESOURCEPARENTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{RESOURCEPARENTTYPE}} with a real resourceparenttype. Replace {{RESOURCENAME}} with a real resourcename. Replace {{RESOURCEPARENTNAME}} with a real resourceparentname. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "create-configuration-assignment",
+      "name": "Create configuration assignment",
+      "description": "Register configuration for resource.",
+      "method": "PUT",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCEPARENTTYPE}}/{{RESOURCEPARENTNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/configurationAssignments/{{CONFIGURATIONASSIGNMENTNAME}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": {
+        "location": "",
+        "properties": {}
+      },
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{CONFIGURATIONASSIGNMENTNAME}}",
+        "{{RESOURCEPARENTTYPE}}",
+        "{{RESOURCENAME}}",
+        "{{RESOURCEPARENTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{RESOURCEPARENTTYPE}} with a real resourceparenttype. Replace {{RESOURCENAME}} with a real resourcename. Replace {{CONFIGURATIONASSIGNMENTNAME}} with a real configurationassignmentname. Replace {{RESOURCEPARENTNAME}} with a real resourceparentname. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "unregister-configuration-for-resource",
+      "name": "Unregister configuration for resource",
+      "description": "Unregister configuration for resource.",
+      "method": "DELETE",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCEPARENTTYPE}}/{{RESOURCEPARENTNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/configurationAssignments/{{CONFIGURATIONASSIGNMENTNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{CONFIGURATIONASSIGNMENTNAME}}",
+        "{{RESOURCEPARENTTYPE}}",
+        "{{RESOURCENAME}}",
+        "{{RESOURCEPARENTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{RESOURCEPARENTTYPE}} with a real resourceparenttype. Replace {{RESOURCENAME}} with a real resourcename. Replace {{CONFIGURATIONASSIGNMENTNAME}} with a real configurationassignmentname. Replace {{RESOURCEPARENTNAME}} with a real resourceparentname. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-updates-to-resource",
+      "name": "Get Updates to resource",
+      "description": "Get updates to resources.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCEPARENTTYPE}}/{{RESOURCEPARENTNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/updates",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{RESOURCEPARENTTYPE}}",
+        "{{RESOURCENAME}}",
+        "{{RESOURCEPARENTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{RESOURCEPARENTTYPE}} with a real resourceparenttype. Replace {{RESOURCENAME}} with a real resourcename. Replace {{RESOURCEPARENTNAME}} with a real resourceparentname. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "apply-updates-to-resource",
+      "name": "Apply Updates to resource",
+      "description": "Apply maintenance updates to resource",
+      "method": "PUT",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/applyUpdates/default",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{RESOURCENAME}} with a real resourcename."
+    },
+    {
+      "id": "track-updates-to-resource",
+      "name": "Track Updates to resource",
+      "description": "Track maintenance updates to resource",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/applyUpdates/{{APPLYUPDATENAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{APPLYUPDATENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{APPLYUPDATENAME}} with a real applyupdatename. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{RESOURCENAME}} with a real resourcename."
+    },
+    {
+      "id": "list-configurationassignments-for-resource-2",
+      "name": "List configurationAssignments for resource",
+      "description": "List configurationAssignments for resource.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/configurationAssignments",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{RESOURCENAME}} with a real resourcename."
+    },
+    {
+      "id": "create-configuration-assignment-2",
+      "name": "Create configuration assignment",
+      "description": "Register configuration for resource.",
+      "method": "PUT",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/configurationAssignments/{{CONFIGURATIONASSIGNMENTNAME}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": {
+        "location": "",
+        "properties": {}
+      },
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{CONFIGURATIONASSIGNMENTNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{CONFIGURATIONASSIGNMENTNAME}} with a real configurationassignmentname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{RESOURCENAME}} with a real resourcename."
+    },
+    {
+      "id": "unregister-configuration-for-resource-2",
+      "name": "Unregister configuration for resource",
+      "description": "Unregister configuration for resource.",
+      "method": "DELETE",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/configurationAssignments/{{CONFIGURATIONASSIGNMENTNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{CONFIGURATIONASSIGNMENTNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{CONFIGURATIONASSIGNMENTNAME}} with a real configurationassignmentname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{RESOURCENAME}} with a real resourcename."
+    },
+    {
+      "id": "get-updates-to-resource-2",
+      "name": "Get Updates to resource",
+      "description": "Get updates to resources.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/{{PROVIDERNAME}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Maintenance/updates",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{PROVIDERNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{PROVIDERNAME}} with a real providername. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{RESOURCENAME}} with a real resourcename."
+    }
+  ]
+}

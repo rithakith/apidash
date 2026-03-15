@@ -1,0 +1,155 @@
+{
+  "api_id": "azure.com:apimanagement-apimapiversionsets:2019-01-01",
+  "endpoint_count": 6,
+  "endpoints": [
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apiversionsets",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apiVersionSets",
+      "description": "Lists a collection of API Version Sets in the specified service instance.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ApiManagement/service/{{SERVICENAME}}/apiVersionSets",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{SERVICENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SERVICENAME}} with a real servicename."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apiversionsets-versionsetid",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apiVersionSets/{versionSetId}",
+      "description": "Gets the details of the Api Version Set specified by its identifier.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ApiManagement/service/{{SERVICENAME}}/apiVersionSets/{{VERSIONSETID}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{VERSIONSETID}}",
+        "{{SERVICENAME}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{VERSIONSETID}} with a real versionsetid. Replace {{SERVICENAME}} with a real servicename."
+    },
+    {
+      "id": "put-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apiversionsets-versionsetid",
+      "name": "PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apiVersionSets/{versionSetId}",
+      "description": "Creates or Updates a Api Version Set.",
+      "method": "PUT",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ApiManagement/service/{{SERVICENAME}}/apiVersionSets/{{VERSIONSETID}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": {
+        "properties": ""
+      },
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{VERSIONSETID}}",
+        "{{SERVICENAME}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{VERSIONSETID}} with a real versionsetid. Replace {{SERVICENAME}} with a real servicename."
+    },
+    {
+      "id": "delete-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apiversionsets-versionsetid",
+      "name": "DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apiVersionSets/{versionSetId}",
+      "description": "Deletes specific Api Version Set.",
+      "method": "DELETE",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ApiManagement/service/{{SERVICENAME}}/apiVersionSets/{{VERSIONSETID}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{VERSIONSETID}}",
+        "{{SERVICENAME}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{VERSIONSETID}} with a real versionsetid. Replace {{SERVICENAME}} with a real servicename."
+    },
+    {
+      "id": "patch-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apiversionsets-versionsetid",
+      "name": "PATCH /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apiVersionSets/{versionSetId}",
+      "description": "Updates the details of the Api VersionSet specified by its identifier.",
+      "method": "PATCH",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ApiManagement/service/{{SERVICENAME}}/apiVersionSets/{{VERSIONSETID}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": {
+        "properties": ""
+      },
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{VERSIONSETID}}",
+        "{{SERVICENAME}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{VERSIONSETID}} with a real versionsetid. Replace {{SERVICENAME}} with a real servicename."
+    },
+    {
+      "id": "head-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apiversionsets-versionsetid",
+      "name": "HEAD /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apiVersionSets/{versionSetId}",
+      "description": "Gets the entity state (Etag) version of the Api Version Set specified by its identifier.",
+      "method": "HEAD",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ApiManagement/service/{{SERVICENAME}}/apiVersionSets/{{VERSIONSETID}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{VERSIONSETID}}",
+        "{{SERVICENAME}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{VERSIONSETID}} with a real versionsetid. Replace {{SERVICENAME}} with a real servicename."
+    }
+  ]
+}

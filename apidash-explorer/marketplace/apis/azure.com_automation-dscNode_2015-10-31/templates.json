@@ -1,0 +1,228 @@
+{
+  "api_id": "azure.com:automation-dscNode:2015-10-31",
+  "endpoint_count": 9,
+  "endpoints": [
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-agentregistrationinformation",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/agentRegistrationInformation",
+      "description": "Retrieve the automation agent registration information.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Automation/automationAccounts/{{AUTOMATIONACCOUNTNAME}}/agentRegistrationInformation",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AUTOMATIONACCOUNTNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{AUTOMATIONACCOUNTNAME}} with a real automationaccountname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "post-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-agentregistrationinformation-regeneratekey",
+      "name": "POST /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/agentRegistrationInformation/regenerateKey",
+      "description": "Regenerate a primary or secondary agent registration key",
+      "method": "POST",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Automation/automationAccounts/{{AUTOMATIONACCOUNTNAME}}/agentRegistrationInformation/regenerateKey",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": {
+        "keyName": ""
+      },
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AUTOMATIONACCOUNTNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{AUTOMATIONACCOUNTNAME}} with a real automationaccountname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-nodes",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes",
+      "description": "Retrieve a list of dsc nodes.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Automation/automationAccounts/{{AUTOMATIONACCOUNTNAME}}/nodes",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AUTOMATIONACCOUNTNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{AUTOMATIONACCOUNTNAME}} with a real automationaccountname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-nodes-nodeid",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+      "description": "Retrieve the dsc node identified by node id.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Automation/automationAccounts/{{AUTOMATIONACCOUNTNAME}}/nodes/{{NODEID}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AUTOMATIONACCOUNTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{NODEID}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{NODEID}} with a real nodeid. Replace {{AUTOMATIONACCOUNTNAME}} with a real automationaccountname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "delete-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-nodes-nodeid",
+      "name": "DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+      "description": "Delete the dsc node identified by node id.",
+      "method": "DELETE",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Automation/automationAccounts/{{AUTOMATIONACCOUNTNAME}}/nodes/{{NODEID}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AUTOMATIONACCOUNTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{NODEID}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{NODEID}} with a real nodeid. Replace {{AUTOMATIONACCOUNTNAME}} with a real automationaccountname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "patch-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-nodes-nodeid",
+      "name": "PATCH /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+      "description": "Update the dsc node.",
+      "method": "PATCH",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Automation/automationAccounts/{{AUTOMATIONACCOUNTNAME}}/nodes/{{NODEID}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": {
+        "nodeConfiguration": "",
+        "nodeId": ""
+      },
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AUTOMATIONACCOUNTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{NODEID}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{NODEID}} with a real nodeid. Replace {{AUTOMATIONACCOUNTNAME}} with a real automationaccountname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-nodes-nodeid-reports",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports",
+      "description": "Retrieve the Dsc node report list by node id.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Automation/automationAccounts/{{AUTOMATIONACCOUNTNAME}}/nodes/{{NODEID}}/reports",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AUTOMATIONACCOUNTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{NODEID}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{NODEID}} with a real nodeid. Replace {{AUTOMATIONACCOUNTNAME}} with a real automationaccountname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-nodes-nodeid-reports-reportid",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports/{reportId}",
+      "description": "Retrieve the Dsc node report data by node id and report id.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Automation/automationAccounts/{{AUTOMATIONACCOUNTNAME}}/nodes/{{NODEID}}/reports/{{REPORTID}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{REPORTID}}",
+        "{{AUTOMATIONACCOUNTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{NODEID}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{NODEID}} with a real nodeid. Replace {{REPORTID}} with a real reportid. Replace {{AUTOMATIONACCOUNTNAME}} with a real automationaccountname. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-automation-automationaccounts-automationaccountname-nodes-nodeid-reports-reportid-content",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports/{reportId}/content",
+      "description": "Retrieve the Dsc node reports by node id and report id.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Automation/automationAccounts/{{AUTOMATIONACCOUNTNAME}}/nodes/{{NODEID}}/reports/{{REPORTID}}/content",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{REPORTID}}",
+        "{{AUTOMATIONACCOUNTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{NODEID}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{NODEID}} with a real nodeid. Replace {{REPORTID}} with a real reportid. Replace {{AUTOMATIONACCOUNTNAME}} with a real automationaccountname. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    }
+  ]
+}

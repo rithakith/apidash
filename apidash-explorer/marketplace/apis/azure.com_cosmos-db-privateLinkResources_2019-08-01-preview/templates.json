@@ -1,0 +1,53 @@
+{
+  "api_id": "azure.com:cosmos-db-privateLinkResources:2019-08-01-preview",
+  "endpoint_count": 2,
+  "endpoints": [
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-documentdb-databaseaccounts-accountname-privatelinkresources",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/privateLinkResources",
+      "description": "Gets the private link resources that need to be created for a Cosmos DB account.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.DocumentDB/databaseAccounts/{{ACCOUNTNAME}}/privateLinkResources",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{ACCOUNTNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{ACCOUNTNAME}} with a real accountname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-documentdb-databaseaccounts-accountname-privatelinkresources-groupname",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/privateLinkResources/{groupName}",
+      "description": "Gets the private link resources that need to be created for a Cosmos DB account.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.DocumentDB/databaseAccounts/{{ACCOUNTNAME}}/privateLinkResources/{{GROUPNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{GROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{ACCOUNTNAME}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{ACCOUNTNAME}} with a real accountname. Replace {{GROUPNAME}} with a real groupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    }
+  ]
+}

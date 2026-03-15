@@ -1,0 +1,31 @@
+{
+  "api_id": "azure.com:security-adaptiveNetworkHardenings:2015-06-01-preview",
+  "endpoint_count": 1,
+  "endpoints": [
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-resourcenamespace-resourcetype-resourcename-providers-microsoft-security-adaptivenetworkhardenings",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.Security/adaptiveNetworkHardenings",
+      "description": "Gets a list of Adaptive Network Hardenings resources in scope of an extended resource.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/{{RESOURCENAMESPACE}}/{{RESOURCETYPE}}/{{RESOURCENAME}}/providers/Microsoft.Security/adaptiveNetworkHardenings",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCENAMESPACE}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{RESOURCETYPE}}",
+        "{{RESOURCENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCENAMESPACE}} with a real resourcenamespace. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{RESOURCETYPE}} with a real resourcetype. Replace {{RESOURCENAME}} with a real resourcename."
+    }
+  ]
+}

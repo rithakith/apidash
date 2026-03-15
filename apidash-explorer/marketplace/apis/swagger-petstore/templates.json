@@ -16,8 +16,8 @@
       "body": null,
       "sample_response": {},
       "auth_placeholders": [
-        "{{SWAGGER-PETSTORE_API_KEY}}",
         "{{PETID}}",
+        "{{SWAGGER-PETSTORE_API_KEY}}",
         "{{SWAGGER_PETSTORE_API_KEY}}"
       ],
       "notes": "Replace {{SWAGGER-PETSTORE_API_KEY}} with your SWAGGER-PETSTORE API KEY. Replace {{PETID}} with a real petid."
@@ -119,8 +119,8 @@
       "body": null,
       "sample_response": {},
       "auth_placeholders": [
-        "{{SWAGGER-PETSTORE_API_KEY}}",
         "{{PETID}}",
+        "{{SWAGGER-PETSTORE_API_KEY}}",
         "{{SWAGGER_PETSTORE_API_KEY}}"
       ],
       "notes": "Replace {{SWAGGER-PETSTORE_API_KEY}} with your SWAGGER-PETSTORE API KEY. Replace {{PETID}} with a real petid."
@@ -139,8 +139,8 @@
       "body": null,
       "sample_response": {},
       "auth_placeholders": [
-        "{{SWAGGER-PETSTORE_API_KEY}}",
         "{{PETID}}",
+        "{{SWAGGER-PETSTORE_API_KEY}}",
         "{{SWAGGER_PETSTORE_API_KEY}}"
       ],
       "notes": "Replace {{SWAGGER-PETSTORE_API_KEY}} with your SWAGGER-PETSTORE API KEY. Replace {{PETID}} with a real petid."
@@ -158,8 +158,8 @@
       "body": null,
       "sample_response": {},
       "auth_placeholders": [
-        "{{SWAGGER-PETSTORE_API_KEY}}",
         "{{PETID}}",
+        "{{SWAGGER-PETSTORE_API_KEY}}",
         "{{SWAGGER_PETSTORE_API_KEY}}"
       ],
       "notes": "Replace {{SWAGGER-PETSTORE_API_KEY}} with your SWAGGER-PETSTORE API KEY. Replace {{PETID}} with a real petid."
@@ -289,8 +289,8 @@
       "body": null,
       "sample_response": {},
       "auth_placeholders": [
-        "{{USERNAME}}",
         "{{SWAGGER-PETSTORE_API_KEY}}",
+        "{{USERNAME}}",
         "{{SWAGGER_PETSTORE_API_KEY}}"
       ],
       "notes": "Replace {{SWAGGER-PETSTORE_API_KEY}} with your SWAGGER-PETSTORE API KEY. Replace {{USERNAME}} with a real username."
@@ -318,8 +318,8 @@
       },
       "sample_response": {},
       "auth_placeholders": [
-        "{{USERNAME}}",
         "{{SWAGGER-PETSTORE_API_KEY}}",
+        "{{USERNAME}}",
         "{{SWAGGER_PETSTORE_API_KEY}}"
       ],
       "notes": "Replace {{SWAGGER-PETSTORE_API_KEY}} with your SWAGGER-PETSTORE API KEY. Replace {{USERNAME}} with a real username."
@@ -337,8 +337,8 @@
       "body": null,
       "sample_response": {},
       "auth_placeholders": [
-        "{{USERNAME}}",
         "{{SWAGGER-PETSTORE_API_KEY}}",
+        "{{USERNAME}}",
         "{{SWAGGER_PETSTORE_API_KEY}}"
       ],
       "notes": "Replace {{SWAGGER-PETSTORE_API_KEY}} with your SWAGGER-PETSTORE API KEY. Replace {{USERNAME}} with a real username."

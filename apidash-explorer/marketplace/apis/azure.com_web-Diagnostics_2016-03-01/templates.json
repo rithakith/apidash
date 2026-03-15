@@ -1,0 +1,551 @@
+{
+  "api_id": "azure.com:web-Diagnostics:2016-03-01",
+  "endpoint_count": 22,
+  "endpoints": [
+    {
+      "id": "list-hosting-environment-detector-responses",
+      "name": "List Hosting Environment Detector Responses",
+      "description": "List Hosting Environment Detector Responses",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/hostingEnvironments/{{NAME}}/detectors",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{NAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{NAME}} with a real name. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-hosting-environment-detector-response",
+      "name": "Get Hosting Environment Detector Response",
+      "description": "Get Hosting Environment Detector Response",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/hostingEnvironments/{{NAME}}/detectors/{{DETECTORNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{DETECTORNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{NAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{NAME}} with a real name. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{DETECTORNAME}} with a real detectorname."
+    },
+    {
+      "id": "list-site-detector-responses",
+      "name": "List Site Detector Responses",
+      "description": "List Site Detector Responses",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/detectors",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{SITENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SITENAME}} with a real sitename."
+    },
+    {
+      "id": "get-site-detector-response",
+      "name": "Get site detector response",
+      "description": "Get site detector response",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/detectors/{{DETECTORNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{DETECTORNAME}}",
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SITENAME}} with a real sitename. Replace {{DETECTORNAME}} with a real detectorname."
+    },
+    {
+      "id": "get-diagnostics-categories",
+      "name": "Get Diagnostics Categories",
+      "description": "Get Diagnostics Categories",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/diagnostics",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{SITENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SITENAME}} with a real sitename."
+    },
+    {
+      "id": "get-diagnostics-category",
+      "name": "Get Diagnostics Category",
+      "description": "Get Diagnostics Category",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/diagnostics/{{DIAGNOSTICCATEGORY}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SITENAME}} with a real sitename."
+    },
+    {
+      "id": "get-site-analyses",
+      "name": "Get Site Analyses",
+      "description": "Get Site Analyses",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/diagnostics/{{DIAGNOSTICCATEGORY}}/analyses",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SITENAME}} with a real sitename."
+    },
+    {
+      "id": "get-site-analysis",
+      "name": "Get Site Analysis",
+      "description": "Get Site Analysis",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/diagnostics/{{DIAGNOSTICCATEGORY}}/analyses/{{ANALYSISNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{ANALYSISNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{SITENAME}} with a real sitename. Replace {{ANALYSISNAME}} with a real analysisname. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "execute-analysis",
+      "name": "Execute Analysis",
+      "description": "Execute Analysis",
+      "method": "POST",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/diagnostics/{{DIAGNOSTICCATEGORY}}/analyses/{{ANALYSISNAME}}/execute",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{ANALYSISNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{SITENAME}} with a real sitename. Replace {{ANALYSISNAME}} with a real analysisname. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-detectors",
+      "name": "Get Detectors",
+      "description": "Get Detectors",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/diagnostics/{{DIAGNOSTICCATEGORY}}/detectors",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SITENAME}} with a real sitename."
+    },
+    {
+      "id": "get-detector",
+      "name": "Get Detector",
+      "description": "Get Detector",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/diagnostics/{{DIAGNOSTICCATEGORY}}/detectors/{{DETECTORNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{DETECTORNAME}}",
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{DETECTORNAME}} with a real detectorname. Replace {{SITENAME}} with a real sitename. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "execute-detector",
+      "name": "Execute Detector",
+      "description": "Execute Detector",
+      "method": "POST",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/diagnostics/{{DIAGNOSTICCATEGORY}}/detectors/{{DETECTORNAME}}/execute",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{DETECTORNAME}}",
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{DETECTORNAME}} with a real detectorname. Replace {{SITENAME}} with a real sitename. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "list-site-detector-responses-2",
+      "name": "List Site Detector Responses",
+      "description": "List Site Detector Responses",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/detectors",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SITENAME}} with a real sitename. Replace {{SLOT}} with a real slot."
+    },
+    {
+      "id": "get-site-detector-response-2",
+      "name": "Get site detector response",
+      "description": "Get site detector response",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/detectors/{{DETECTORNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{DETECTORNAME}}",
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{DETECTORNAME}} with a real detectorname. Replace {{SITENAME}} with a real sitename. Replace {{SLOT}} with a real slot. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-diagnostics-categories-2",
+      "name": "Get Diagnostics Categories",
+      "description": "Get Diagnostics Categories",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/diagnostics",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SITENAME}} with a real sitename. Replace {{SLOT}} with a real slot."
+    },
+    {
+      "id": "get-diagnostics-category-2",
+      "name": "Get Diagnostics Category",
+      "description": "Get Diagnostics Category",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/diagnostics/{{DIAGNOSTICCATEGORY}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{SITENAME}} with a real sitename. Replace {{SLOT}} with a real slot. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-site-analyses-2",
+      "name": "Get Site Analyses",
+      "description": "Get Site Analyses",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/diagnostics/{{DIAGNOSTICCATEGORY}}/analyses",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{SITENAME}} with a real sitename. Replace {{SLOT}} with a real slot. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-site-analysis-2",
+      "name": "Get Site Analysis",
+      "description": "Get Site Analysis",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/diagnostics/{{DIAGNOSTICCATEGORY}}/analyses/{{ANALYSISNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{ANALYSISNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{SITENAME}} with a real sitename. Replace {{ANALYSISNAME}} with a real analysisname. Replace {{SLOT}} with a real slot. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "execute-analysis-2",
+      "name": "Execute Analysis",
+      "description": "Execute Analysis",
+      "method": "POST",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/diagnostics/{{DIAGNOSTICCATEGORY}}/analyses/{{ANALYSISNAME}}/execute",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{ANALYSISNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{SITENAME}} with a real sitename. Replace {{ANALYSISNAME}} with a real analysisname. Replace {{SLOT}} with a real slot. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-detectors-2",
+      "name": "Get Detectors",
+      "description": "Get Detectors",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/diagnostics/{{DIAGNOSTICCATEGORY}}/detectors",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{SITENAME}} with a real sitename. Replace {{SLOT}} with a real slot. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-detector-2",
+      "name": "Get Detector",
+      "description": "Get Detector",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/diagnostics/{{DIAGNOSTICCATEGORY}}/detectors/{{DETECTORNAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{DETECTORNAME}}",
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{DETECTORNAME}} with a real detectorname. Replace {{SITENAME}} with a real sitename. Replace {{SLOT}} with a real slot. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "execute-detector-2",
+      "name": "Execute Detector",
+      "description": "Execute Detector",
+      "method": "POST",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Web/sites/{{SITENAME}}/slots/{{SLOT}}/diagnostics/{{DIAGNOSTICCATEGORY}}/detectors/{{DETECTORNAME}}/execute",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{DETECTORNAME}}",
+        "{{SITENAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SLOT}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{DIAGNOSTICCATEGORY}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{DETECTORNAME}} with a real detectorname. Replace {{SITENAME}} with a real sitename. Replace {{SLOT}} with a real slot. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{DIAGNOSTICCATEGORY}} with a real diagnosticcategory. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "api_id": "azure.com:compute-containerService:2015-11-01-preview",
+  "endpoint_count": 4,
+  "endpoints": [
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-containerservice-containerservices",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/containerServices",
+      "description": "The operation to list container services.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ContainerService/containerServices",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-containerservice-containerservices-containerservicename",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/containerServices/{containerServiceName}",
+      "description": "The operation to get a container service.",
+      "method": "GET",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ContainerService/containerServices/{{CONTAINERSERVICENAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{CONTAINERSERVICENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{CONTAINERSERVICENAME}} with a real containerservicename. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "put-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-containerservice-containerservices-containerservicename",
+      "name": "PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/containerServices/{containerServiceName}",
+      "description": "The operation to create or update a container service.",
+      "method": "PUT",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ContainerService/containerServices/{{CONTAINERSERVICENAME}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": {
+        "properties": ""
+      },
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{CONTAINERSERVICENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{CONTAINERSERVICENAME}} with a real containerservicename. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "delete-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-containerservice-containerservices-containerservicename",
+      "name": "DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/containerServices/{containerServiceName}",
+      "description": "The operation to delete a container service.",
+      "method": "DELETE",
+      "url": "https://management.azure.com/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.ContainerService/containerServices/{{CONTAINERSERVICENAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{CONTAINERSERVICENAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname. Replace {{CONTAINERSERVICENAME}} with a real containerservicename. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    }
+  ]
+}

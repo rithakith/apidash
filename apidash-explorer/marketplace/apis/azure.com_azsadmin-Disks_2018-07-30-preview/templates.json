@@ -1,0 +1,51 @@
+{
+  "api_id": "azure.com:azsadmin-Disks:2018-07-30-preview",
+  "endpoint_count": 2,
+  "endpoints": [
+    {
+      "id": "get-subscriptions-subscriptionid-providers-microsoft-compute-admin-locations-location-disks",
+      "name": "GET /subscriptions/{subscriptionId}/providers/Microsoft.Compute.Admin/locations/{location}/disks",
+      "description": "Returns a list of disks.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/providers/Microsoft.Compute.Admin/locations/{{LOCATION}}/disks",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{LOCATION}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{LOCATION}} with a real location. Replace {{SUBSCRIPTIONID}} with a real subscriptionid."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-providers-microsoft-compute-admin-locations-location-disks-diskid",
+      "name": "GET /subscriptions/{subscriptionId}/providers/Microsoft.Compute.Admin/locations/{location}/disks/{DiskId}",
+      "description": "Returns the disk.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/providers/Microsoft.Compute.Admin/locations/{{LOCATION}}/disks/{{DISKID}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{LOCATION}}",
+        "{{DISKID}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{LOCATION}} with a real location. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{DISKID}} with a real diskid."
+    }
+  ]
+}
