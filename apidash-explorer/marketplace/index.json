@@ -1,7 +1,7 @@
 {
   "version": "v1",
-  "last_updated": "2026-03-13",
-  "total_apis": 3,
+  "last_updated": "2026-03-15",
+  "total_apis": 4,
   "apis": [
     {
       "id": "adyen.com_CheckoutService",
@@ -46,6 +46,29 @@
       "verified": true,
       "featured": false,
       "source": "apis.guru"
+    },
+    {
+      "id": "swagger-petstore",
+      "name": "Swagger Petstore",
+      "provider": "swagger-petstore",
+      "description": "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, swagger. For this sample, you can use the api key special-key to test the authorization filters.",
+      "categories": [
+        "Other"
+      ],
+      "auth_type": "api_key",
+      "auth_placeholders": [
+        "{{SWAGGER-PETSTORE_API_KEY}}"
+      ],
+      "base_url": "https://petstore.swagger.io/v2",
+      "logo_url": "https://api.dicebear.com/7.x/identicon/svg?seed=petstore.swagger.io",
+      "docs_url": null,
+      "template_count": 20,
+      "template_file": "apis/swagger-petstore/templates.json",
+      "rating": 0.0,
+      "review_count": 0,
+      "verified": false,
+      "featured": false,
+      "source": "manual"
     },
     {
       "id": "weatherbit.io",
