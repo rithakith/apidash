@@ -51,16 +51,13 @@ class Orchestrator:
             
             try:
                 # Phase 2: Parse
-                # Note: parser.parse is a sync function
-                source_type = "html" if source == "manual" and api_id.endswith(".html") else "openapi" 
-                # Actually, the fetcher determines the source type. 
-                # For simplicity, we detect it based on the file exists in raw/
-                
                 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
                 raw_path = os.path.join(base_path, "raw")
                 
+                # Detect the type based on whether the Fetcher saved it as .html or .json
                 actual_source_type = "openapi"
-                if os.path.exists(os.path.join(raw_path, f"{api_id.replace(':', '_').replace('/', '_')}.html")):
+                safe_id = api_id.replace(':', '_').replace('/', '_')
+                if os.path.exists(os.path.join(raw_path, f"{safe_id}.html")):
                     actual_source_type = "html"
                 
                 parsed_api = run_parser(api_id, actual_source_type)
@@ -68,15 +65,8 @@ class Orchestrator:
                     raise Exception(f"Phase 2 (Parser) errors: {'; '.join(parsed_api.parse_errors)}")
 
                 # Phase 3: Enrich
-                # Metadata lookup logic is complex, using APIEnricher directly
-                # We need to find the metadata because enrich() requires it.
-                # In enricher.py, run_enrichment handles this lookup.
-                # However, run_enrichment() calls parse() internally, which is redundant.
-                # Let's use the logic from run_enrichment but bypass the extra call.
-                
-                # For now, we'll use a modified version of the logic to avoid redundant parsing
                 from pipeline.enricher import run_enrichment
-                enriched_api = await run_enrichment(api_id)
+                enriched_api = await run_enrichment(api_id, parsed_api=parsed_api)
                 
                 if enriched_api.enrich_warnings:
                     self.stats["warnings"] += 1
@@ -139,15 +129,27 @@ class Orchestrator:
             print("=" * 40)
 
 async def main():
+    # Phase 0: Setup command-line "missions" using argparse.
+    # This turns the script into a professional tool with different modes.
     parser = argparse.ArgumentParser(description="API Dash Marketplace Orchestrator")
+    
+    # 1. The Safety Switch: Runs logic but skips the final save-to-disk step. Useful for testing.
     parser.add_argument("--dry-run", action="store_true", help="Run phases but skip publication write step")
+    
+    # 2. The Sniper: Directs the engine to process only one specific API instead of thousands.
     parser.add_argument("--api-id", help="Process a single specific API ID")
+    
+    # 3. The Reset Button: Ignores snapshot memory and re-processes every API from scratch.
     parser.add_argument("--force-all", action="store_true", help="Force reprocess all APIs regardless of snapshot")
+    
+    # 4. The Filter: Limits the run to just public APIs (apis_guru) or your own (manual).
     parser.add_argument("--source", choices=["apis_guru", "manual"], help="Only process APIs from specific source")
     
     args = parser.parse_args()
 
-    # Windows async policy
+    # Windows Compatibility Patch: 
+    # Python's modern async manager on Windows has a bug that causes random connection crashes. 
+    # This force-switches to the stable 'Selector' manager to ensure 4,000+ downloads don't hang.
     if sys.platform == "win32":
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 

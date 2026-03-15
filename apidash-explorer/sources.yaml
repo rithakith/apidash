@@ -8,7 +8,3 @@ sources:
     spec_url: https://api.github.com/emojis
     type: html
     category: Social Media
-  - id: reqres
-    name: ReqRes API
-    spec_url: https://reqres.in/api/users
-    type: openapi

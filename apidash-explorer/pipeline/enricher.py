@@ -263,12 +263,13 @@ class APIEnricher:
 
 # --- Entry Point ---
 
-async def run_enrichment(api_id: str) -> EnrichedAPI:
+async def run_enrichment(api_id: str, parsed_api: Optional[ParsedAPI] = None) -> EnrichedAPI:
     """
-    Orchestrates Phase 2 parse and Phase 3 enrichment for an API.
+    Orchestrates Phase 2 parse (if needed) and Phase 3 enrichment for an API.
     
     Args:
         api_id: The ID of the API to enrich.
+        parsed_api: Optional already-parsed API object to avoid double parsing.
         
     Returns:
         An EnrichedAPI object.
@@ -320,21 +321,21 @@ async def run_enrichment(api_id: str) -> EnrichedAPI:
         except Exception:
             pass
 
-    # Determine source_type and path based on existence in raw/
-    from pipeline.fetcher import make_safe_id
-    safe_id = make_safe_id(api_id)
-    source_type = "openapi"
-    file_path = os.path.join(base_path, "raw", f"{safe_id}.json")
-    if not os.path.exists(file_path):
-        file_path = os.path.join(base_path, "raw", f"{safe_id}.yaml")
+    # If we don't have the parsed object yet, we need to generate it
+    if parsed_api is None:
+        # Determine source_type and path based on existence in raw/
+        from pipeline.fetcher import make_safe_id
+        safe_id = make_safe_id(api_id)
+        source_type = "openapi"
+        file_path = os.path.join(base_path, "raw", f"{safe_id}.json")
         if not os.path.exists(file_path):
-            file_path = os.path.join(base_path, "raw", f"{safe_id}.html")
-            source_type = "html"
-        
-    # Call Phase 2 Parser
-    # Note: parse() expects api_id and source_type, and looks in local raw/ 
-    # but we should ensure it can find it.
-    parsed_api = parse(api_id, source_type)
+            file_path = os.path.join(base_path, "raw", f"{safe_id}.yaml")
+            if not os.path.exists(file_path):
+                file_path = os.path.join(base_path, "raw", f"{safe_id}.html")
+                source_type = "html"
+            
+        # Call Phase 2 Parser
+        parsed_api = parse(api_id, source_type)
     
     return await APIEnricher.enrich(parsed_api, metadata, is_guru=is_guru)
 
