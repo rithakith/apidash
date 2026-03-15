@@ -54,7 +54,9 @@ class APIPublisher:
 
         try:
             # 1. Write per-API Template File
-            api_folder = os.path.join(self.marketplace_path, "apis", enriched_api.api_id)
+            from pipeline.fetcher import make_safe_id
+            safe_id = make_safe_id(enriched_api.api_id)
+            api_folder = os.path.join(self.marketplace_path, "apis", safe_id)
             template_file = os.path.join(api_folder, "templates.json")
             
             template_data = {
@@ -86,7 +88,7 @@ class APIPublisher:
                 "logo_url": enriched_api.logo_url,
                 "docs_url": enriched_api.docs_url,
                 "template_count": len(validation_result.valid_templates),
-                "template_file": f"apis/{enriched_api.api_id}/templates.json",
+                "template_file": f"apis/{make_safe_id(enriched_api.api_id)}/templates.json",
                 "rating": 0.0,
                 "review_count": 0,
                 "verified": enriched_api.verified,

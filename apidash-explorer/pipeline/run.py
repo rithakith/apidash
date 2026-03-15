@@ -56,7 +56,8 @@ class Orchestrator:
                 
                 # Detect the type based on whether the Fetcher saved it as .html or .json
                 actual_source_type = "openapi"
-                safe_id = api_id.replace(':', '_').replace('/', '_')
+                from pipeline.fetcher import make_safe_id
+                safe_id = make_safe_id(api_id)
                 if os.path.exists(os.path.join(raw_path, f"{safe_id}.html")):
                     actual_source_type = "html"
                 
@@ -190,7 +191,8 @@ async def main():
             missing_checked = 0
             for tid in unchanged:
                 # Resolve the safe ID for the folder check
-                safe_id = tid.replace(":", "_").replace("/", "_").replace("\\", "_")
+                from pipeline.fetcher import make_safe_id
+                safe_id = make_safe_id(tid)
                 templates_file = os.path.join(marketplace_path, safe_id, "templates.json")
                 
                 if not os.path.exists(templates_file):
