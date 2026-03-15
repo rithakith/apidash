@@ -179,8 +179,26 @@ async def main():
             target_jobs = [(tid, "all") for tid in (to_process + unchanged)]
             orchestrator.stats["skipped"] = 0
         else:
+            # Smart Processing: Process new items AND items missing from the marketplace
             target_jobs = [(tid, "update") for tid in to_process]
-            orchestrator.stats["skipped"] = len(unchanged)
+            
+            base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            marketplace_path = os.path.join(base_path, "marketplace", "apis")
+
+            missing_checked = 0
+            for tid in unchanged:
+                # Resolve the safe ID for the folder check
+                safe_id = tid.replace(":", "_").replace("/", "_").replace("\\", "_")
+                templates_file = os.path.join(marketplace_path, safe_id, "templates.json")
+                
+                if not os.path.exists(templates_file):
+                    target_jobs.append((tid, "missing-recovery"))
+                    missing_checked += 1
+            
+            if missing_checked > 0:
+                logger.info(f"Recovery: Found {missing_checked} APIs in snapshot with missing marketplace files. Re-queueing.")
+            
+            orchestrator.stats["skipped"] = len(unchanged) - missing_checked
 
         # Semaphore to limit concurrency (max 5 APIs at a time per requirements)
         sem = asyncio.Semaphore(5)
