@@ -1,0 +1,61 @@
+name: API Marketplace Sync
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Runs nightly at 2:00 AM UTC
+  workflow_dispatch:     # Allows manual trigger from the GitHub UI
+    inputs:
+      api_id:
+        description: 'Reprocess a specific API ID (optional)'
+        required: false
+        type: string
+      force_all:
+        description: 'Force reprocess all APIs?'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write  # Required to push changes back to the repository
+
+jobs:
+  sync-marketplace:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Checkout full history for proper git operations
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: 'pipeline/requirements.txt'
+
+      - name: Install Dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Run Marketplace Pipeline
+        run: |
+          if [ "${{ github.event.inputs.api_id }}" != "" ]; then
+            python pipeline/run.py --api-id "${{ github.event.inputs.api_id }}"
+          elif [ "${{ github.event.inputs.force_all }}" == "true" ]; then
+            python pipeline/run.py --force-all
+          else
+            python pipeline/run.py
+          fi
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "marketplace-bot"
+          git config user.email "marketplace-bot@users.noreply.github.com"
+          git add marketplace/
+          # Only commit if there are changes to avoid workflow failure
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: sync marketplace [skip ci]"
+            git push
+          else
+            echo "No marketplace changes detected, skipping commit."
+          fi

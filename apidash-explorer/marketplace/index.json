@@ -1,0 +1,72 @@
+{
+  "version": "v1",
+  "last_updated": "2026-03-13",
+  "total_apis": 3,
+  "apis": [
+    {
+      "id": "adyen.com_CheckoutService",
+      "name": "Adyen Checkout API",
+      "provider": "adyen.com_CheckoutService",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort)....",
+      "categories": [
+        "Finance"
+      ],
+      "auth_type": "api_key",
+      "auth_placeholders": [
+        "{{ADYEN_API_KEY}}"
+      ],
+      "base_url": "https://checkout-test.adyen.com/v70",
+      "logo_url": "https://api.apis.guru/v2/cache/logo/https_adyen.com_.resources_adyen-website_themes_images_apple-icon-180x180.png",
+      "docs_url": null,
+      "template_count": 23,
+      "template_file": "apis/adyen.com_CheckoutService/templates.json",
+      "rating": 0.0,
+      "review_count": 0,
+      "verified": true,
+      "featured": false,
+      "source": "apis.guru"
+    },
+    {
+      "id": "httpbin.org",
+      "name": "httpbin.org",
+      "provider": "httpbin.org",
+      "description": "A simple HTTP Request & Response Service.<br/ <br/ <bRun locally: </b <code$ docker run -p 80:80 kennethreitz/httpbin</code",
+      "categories": [
+        "Dev Tools"
+      ],
+      "auth_type": "none",
+      "auth_placeholders": [],
+      "base_url": "https://httpbin.org",
+      "logo_url": "https://api.apis.guru/v2/cache/logo/https_apis.guru_assets_images_no-logo.svg",
+      "docs_url": null,
+      "template_count": 73,
+      "template_file": "apis/httpbin.org/templates.json",
+      "rating": 0.0,
+      "review_count": 0,
+      "verified": true,
+      "featured": false,
+      "source": "apis.guru"
+    },
+    {
+      "id": "weatherbit.io",
+      "name": "Weatherbit - Interactive Swagger UI Documentation",
+      "provider": "weatherbit.io",
+      "description": "This an interactive version of the documentation for the Weatherbit API. The base URL for the API is http://api.weatherbit.io/v2.0/ or https://api.weatherbit.io/v2.0/. Below is the Swagger UI documentation for the API. All API requests require the key parameter....",
+      "categories": [
+        "Maps & Geo"
+      ],
+      "auth_type": "none",
+      "auth_placeholders": [],
+      "base_url": "https://api.weatherbit.io/v2.0",
+      "logo_url": "https://api.apis.guru/v2/cache/logo/https_twitter.com_weatherbitio_profile_image.jpeg",
+      "docs_url": null,
+      "template_count": 47,
+      "template_file": "apis/weatherbit.io/templates.json",
+      "rating": 0.0,
+      "review_count": 0,
+      "verified": true,
+      "featured": false,
+      "source": "apis.guru"
+    }
+  ]
+}
