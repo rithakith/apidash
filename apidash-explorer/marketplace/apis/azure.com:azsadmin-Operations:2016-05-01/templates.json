@@ -1,0 +1,54 @@
+{
+  "api_id": "azure.com:azsadmin-Operations:2016-05-01",
+  "endpoint_count": 2,
+  "endpoints": [
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-system-location-providers-provider-fabriclocations-location-computeoperationresults-computeoperationresult",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/{provider}/fabricLocations/{location}/computeOperationResults/{computeOperationResult}",
+      "description": "Get the status of a compute fabric operation.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/System.{{LOCATION}}/providers/{{PROVIDER}}/fabricLocations/{{LOCATION}}/computeOperationResults/{{COMPUTEOPERATIONRESULT}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{LOCATION}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{PROVIDER}}",
+        "{{COMPUTEOPERATIONRESULT}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{LOCATION}} with a real location. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{COMPUTEOPERATIONRESULT}} with a real computeoperationresult. Replace {{PROVIDER}} with a real provider."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-system-location-providers-provider-fabriclocations-location-networkoperationresults-networkoperationresult",
+      "name": "GET /subscriptions/{subscriptionId}/resourceGroups/System.{location}/providers/{provider}/fabricLocations/{location}/networkOperationResults/{networkOperationResult}",
+      "description": "Get the status of a network fabric operation.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/resourceGroups/System.{{LOCATION}}/providers/{{PROVIDER}}/fabricLocations/{{LOCATION}}/networkOperationResults/{{NETWORKOPERATIONRESULT}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{LOCATION}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{PROVIDER}}",
+        "{{NETWORKOPERATIONRESULT}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{LOCATION}} with a real location. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{NETWORKOPERATIONRESULT}} with a real networkoperationresult. Replace {{PROVIDER}} with a real provider."
+    }
+  ]
+}

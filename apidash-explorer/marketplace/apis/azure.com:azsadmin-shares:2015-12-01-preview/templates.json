@@ -1,0 +1,101 @@
+{
+  "api_id": "azure.com:azsadmin-shares:2015-12-01-preview",
+  "endpoint_count": 4,
+  "endpoints": [
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-storage-admin-farms-farmid-shares",
+      "name": "GET /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Storage.Admin/farms/{farmId}/shares",
+      "description": "Returns a list of storage shares.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Storage.Admin/farms/{{FARMID}}/shares",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{FARMID}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{FARMID}} with a real farmid. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-storage-admin-farms-farmid-shares-sharename",
+      "name": "GET /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Storage.Admin/farms/{farmId}/shares/{shareName}",
+      "description": "Returns a storage share.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Storage.Admin/farms/{{FARMID}}/shares/{{SHARENAME}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{FARMID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{SHARENAME}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{FARMID}} with a real farmid. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SHARENAME}} with a real sharename. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-storage-admin-farms-farmid-shares-sharename-metricdefinitions",
+      "name": "GET /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Storage.Admin/farms/{farmId}/shares/{shareName}/metricdefinitions",
+      "description": "Returns a list of metric definitions for a storage share.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Storage.Admin/farms/{{FARMID}}/shares/{{SHARENAME}}/metricdefinitions",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{FARMID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{SHARENAME}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{FARMID}} with a real farmid. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SHARENAME}} with a real sharename. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-storage-admin-farms-farmid-shares-sharename-metrics",
+      "name": "GET /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Storage.Admin/farms/{farmId}/shares/{shareName}/metrics",
+      "description": "Returns a list of metrics for a storage share.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Storage.Admin/farms/{{FARMID}}/shares/{{SHARENAME}}/metrics",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{FARMID}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{SHARENAME}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{FARMID}} with a real farmid. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SHARENAME}} with a real sharename. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname."
+    }
+  ]
+}

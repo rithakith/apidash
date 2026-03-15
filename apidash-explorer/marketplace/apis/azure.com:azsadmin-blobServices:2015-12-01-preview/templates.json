@@ -1,0 +1,78 @@
+{
+  "api_id": "azure.com:azsadmin-blobServices:2015-12-01-preview",
+  "endpoint_count": 3,
+  "endpoints": [
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-storage-admin-farms-farmid-blobservices-servicetype",
+      "name": "GET /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Storage.Admin/farms/{farmId}/blobservices/{serviceType}",
+      "description": "Returns the BLOB service.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Storage.Admin/farms/{{FARMID}}/blobservices/{{SERVICETYPE}}",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{FARMID}}",
+        "{{SERVICETYPE}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{FARMID}} with a real farmid. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SERVICETYPE}} with a real servicetype. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-storage-admin-farms-farmid-blobservices-servicetype-metricdefinitions",
+      "name": "GET /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Storage.Admin/farms/{farmId}/blobservices/{serviceType}/metricdefinitions",
+      "description": "Returns the list of metric definitions for BLOB service.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Storage.Admin/farms/{{FARMID}}/blobservices/{{SERVICETYPE}}/metricdefinitions",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{FARMID}}",
+        "{{SERVICETYPE}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{FARMID}} with a real farmid. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SERVICETYPE}} with a real servicetype. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname."
+    },
+    {
+      "id": "get-subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-storage-admin-farms-farmid-blobservices-servicetype-metrics",
+      "name": "GET /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Storage.Admin/farms/{farmId}/blobservices/{serviceType}/metrics",
+      "description": "Returns a list of metrics for BLOB service.",
+      "method": "GET",
+      "url": "https://adminmanagement.local.azurestack.external/subscriptions/{{SUBSCRIPTIONID}}/resourcegroups/{{RESOURCEGROUPNAME}}/providers/Microsoft.Storage.Admin/farms/{{FARMID}}/blobservices/{{SERVICETYPE}}/metrics",
+      "headers": {
+        "Authorization": "Bearer{{AZURE_COM_ACCESS_TOKEN}}"
+      },
+      "query_params": {
+        "api-version": ""
+      },
+      "body": null,
+      "sample_response": {},
+      "auth_placeholders": [
+        "{{FARMID}}",
+        "{{SERVICETYPE}}",
+        "{{AZURE_ACCESS_TOKEN}}",
+        "{{SUBSCRIPTIONID}}",
+        "{{RESOURCEGROUPNAME}}",
+        "{{AZURE_COM_ACCESS_TOKEN}}"
+      ],
+      "notes": "Replace {{AZURE_ACCESS_TOKEN}} with your AZURE ACCESS TOKEN. Replace {{FARMID}} with a real farmid. Replace {{SUBSCRIPTIONID}} with a real subscriptionid. Replace {{SERVICETYPE}} with a real servicetype. Replace {{RESOURCEGROUPNAME}} with a real resourcegroupname."
+    }
+  ]
+}
