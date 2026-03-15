@@ -27,6 +27,8 @@ jobs:
     defaults:
       run:
         working-directory: apidash-explorer
+    env:
+      PYTHONPATH: .
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
