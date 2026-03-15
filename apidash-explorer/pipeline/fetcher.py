@@ -316,8 +316,14 @@ async def main() -> Tuple[List[str], List[str], List[str]]:
             if not spec_url:
                 continue
 
-            # Check snapshot against versioned ID
-            if snapshot.get(versioned_id) != updated_timestamp:
+            # Check snapshot against versioned ID AND check if local file actually exists
+            file_path = get_safe_filepath(versioned_id, "openapi") # Default check
+            # Also check .html if it might be that
+            html_path = get_safe_filepath(versioned_id, "html")
+            
+            file_missing = not file_path.exists() and not html_path.exists()
+
+            if snapshot.get(versioned_id) != updated_timestamp or file_missing:
                 jobs.append({
                     "id": versioned_id,
                     "url": spec_url,
