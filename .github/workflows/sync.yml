@@ -3,7 +3,7 @@ name: API Marketplace Sync
 on:
   schedule:
     - cron: '0 2 * * *'  # Runs nightly at 2:00 AM UTC
-  workflow_dispatch:     # Allows manual trigger from the GitHub UI
+  workflow_dispatch:
     inputs:
       api_id:
         description: 'Reprocess a specific API ID (optional)'
@@ -14,6 +14,9 @@ on:
         required: false
         default: false
         type: boolean
+  push:
+    branches:
+      - feature/api-explorer-pipeline  # Trigger on push to this branch for testing
 
 permissions:
   contents: write  # Required to push changes back to the repository
@@ -21,6 +24,9 @@ permissions:
 jobs:
   sync-marketplace:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apidash-explorer
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
